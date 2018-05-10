@@ -20,7 +20,10 @@
         var distfield = $("#distfield").val();
         
         //create the plot area on the plotdiv element
-        var req = $("#plotdiv").rplot("app")
+        var req = $("#plotdiv").rplot("randomplot", {
+          n : nfield,
+          dist : distfield
+        })
 
         //if R returns an error, alert the error message
         req.fail(function(){
